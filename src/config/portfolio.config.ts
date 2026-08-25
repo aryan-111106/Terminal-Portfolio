@@ -157,7 +157,7 @@ export const portfolioConfig: PortfolioConfig = {
       tags: ["Python", "Computer Vision", "OpenCV", "Image Processing"],
       githubUrl: "https://github.com/aryan-111106/Number-Plate",
       stars: 0,
-      stats: "Python • Computer Vision"
+      stats: "Python • Computer Vision • OpenCV"
     },
     {
       id: "budgetbuddy",
@@ -185,15 +185,15 @@ export const portfolioConfig: PortfolioConfig = {
     },
     {
       id: "gamer-color",
-      name: "Gamer-Color Palette Visualizer",
+      name: "Gamer Color-Personality Quiz & Discovery Deck",
       category: "Frontend",
       featured: false,
-      description: "Interactive gaming-themed color palette and theme generation utility built with TypeScript.",
-      longDescription: "Provides developer-friendly color scheme generation, hex/RGB conversions, and real-time contrast previews for game and UI design.",
-      tags: ["TypeScript", "Frontend", "Theme Generator", "UI"],
+      description: "An interactive, sleek web application that helps players discover their Gamer Color personality archetype.",
+      longDescription: "The Gamer Color Personality Quiz is an 8-question assessment based on a 2D coordinate gaming motivation model (Heart vs. Head on the X-axis and Architect vs. Adventurer on the Y-axis).",
+      tags: ["TypeScript", "Frontend", "UI"],
       githubUrl: "https://github.com/aryan-111106/Gamer-color",
       stars: 0,
-      stats: "TypeScript"
+      stats: "TypeScript • React • TailwindCSS • Framer Motion"
     },
     {
       id: "college",
