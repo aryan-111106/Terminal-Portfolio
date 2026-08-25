@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build && node test-runner.mjs",
+    "preview": "vite preview",
+    "test": "node test-runner.mjs",
+    "test:e2e": "node test-runner.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
