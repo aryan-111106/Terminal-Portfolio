@@ -11,6 +11,7 @@ import { SkillsOutput } from '../Output/SkillsOutput';
 import { ExperienceOutput } from '../Output/ExperienceOutput';
 import { AboutOutput } from '../Output/AboutOutput';
 import { ContactOutput } from '../Output/ContactOutput';
+import { ResumeOutput } from '../Output/ResumeOutput';
 import { Cowsay } from '../EasterEggs/Cowsay';
 import { TerminalPrompt } from './TerminalPrompt';
 import { commandRegistry } from '../../services/commandRegistry';
@@ -118,6 +119,9 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
     }
     if (item.type === 'contact') {
       return <ContactOutput />;
+    }
+    if (item.type === 'resume') {
+      return <ResumeOutput />;
     }
     if (item.type === 'help') {
       return renderHelpOutput();

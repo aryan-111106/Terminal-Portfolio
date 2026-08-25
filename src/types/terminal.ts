@@ -14,6 +14,7 @@ export type OutputType =
   | 'experience' 
   | 'about' 
   | 'contact' 
+  | 'resume'
   | 'help' 
   | 'tree' 
   | 'matrix' 

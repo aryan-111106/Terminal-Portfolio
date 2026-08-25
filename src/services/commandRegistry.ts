@@ -344,10 +344,21 @@ DESCRIPTION:
         }
 
         // Check if viewing resume.pdf
-        if (args[0].endsWith('.pdf')) {
-          if (portfolioConfig.resumeUrl && typeof window !== 'undefined') {
-            window.open(portfolioConfig.resumeUrl, '_blank');
+        if (args[0].toLowerCase().includes('resume') || args[0].endsWith('.pdf')) {
+          if (typeof document !== 'undefined') {
+            try {
+              const a = document.createElement('a');
+              a.href = portfolioConfig.resumeUrl || '/resume.pdf';
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+            } catch {
+              // Ignore popup restrictions
+            }
           }
+          return { output: '', type: 'resume' };
         }
 
         return { output: res.content, type: 'text' };
@@ -526,17 +537,27 @@ ${e.details ? e.details.map(d => `   • ${d}`).join('\n') : ''}`).join('\n\n');
 
     this.register({
       name: 'resume',
-      aliases: ['cv'],
+      aliases: ['cv', 'resume.pdf', './resume.pdf', 'cv.pdf', 'view-resume', 'get-resume'],
       category: 'Portfolio',
       description: 'Open or download curriculum vitae (PDF)',
       usage: 'resume',
       execute: () => {
-        if (portfolioConfig.resumeUrl && typeof window !== 'undefined') {
-          window.open(portfolioConfig.resumeUrl, '_blank');
+        if (typeof document !== 'undefined') {
+          try {
+            const a = document.createElement('a');
+            a.href = portfolioConfig.resumeUrl || '/resume.pdf';
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          } catch {
+            // Popup blocker fallback
+          }
         }
         return {
-          output: `Opening resume (${portfolioConfig.resumeUrl || '/resume.pdf'})... If it did not open automatically, contact ${portfolioConfig.email}`,
-          type: 'success'
+          output: '',
+          type: 'resume'
         };
       }
     });
