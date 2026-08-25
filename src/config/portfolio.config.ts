@@ -75,28 +75,36 @@ export const portfolioConfig: PortfolioConfig = {
     {
       category: "Programming Languages",
       skills: [
-        { name: "Python (Core, OOP, Scripting)", level: 92, description: "" },
-        { name: "TypeScript / JavaScript", level: 30, description: "" },
+        { name: "Python (Core, OOP, Scripting)", level: 90, description: "" },
         { name: "C", level: 80, description: "" },
-        { name: "SQL", level: 78, description: "" }
+        { name: "TypeScript / JavaScript", level: 25, description: "" },
+        { name: "SQL", level: 60, description: "" }
+      ]
+    },
+    {
+      category: "Frontend",
+      skills: [
+        { name: "HTML/CSS", level: 80, description: "" },
+        { name: "React", level: 25, description: "" },
+        { name: "Streamlit", level: 50, description: "" }
       ]
     },
     {
       category: "AI, ML & Computer Vision",
       skills: [
-        { name: "Generative AI", level: 88, description: "" },
-        { name: "Computer Vision & OpenCV", level: 30, description: "" },
-        { name: "Machine Learning", level: 30, description: "" },
-        { name: "Pandas & NumPy", level: 50, description: "" }
+        { name: "Machine Learning & Computer Vision", level: 20, description: "Fundamentals" },
+        { name: "AI Tools", level: 30, description: "Claude Code, Antigravity, Opencode" },
+        { name: "Pandas & NumPy", level: 50, description: "Data cleaning, Feature engineering" },
+        { name: "Generative AI", level: 25, description: "Gemini API, Groq, LangChain" }
       ]
     },
     {
       category: "Core Computer Science & Cloud",
       skills: [
-        { name: "Data Structures & Algorithms (DSA)", level: 30, description: "Problem solving, arrays, trees, recursion, complexity analysis" },
-        { name: "Deployment and Cloud", level: 80, description: "Vercel" },
-        { name: "Git & GitHub", level: 88, description: "Version control, multi-repository management, open-source" },
-        { name: "Database & OS Fundamentals", level: 60, description: "DBMS schemas, OS processes, Linux CLI workflow" }
+        { name: "Data Structures & Algorithms (DSA)", level: 25, description: "Problem solving, arrays, recursion, complexity analysis" },
+        { name: "Deployment and Cloud", level: 30, description: "Vercel" },
+        { name: "Git & GitHub", level: 85, description: "Version control, multi-repository management, open-source" },
+        { name: "Database & OS Fundamentals", level: 30, description: "DBMS schemas, OS processes, Linux CLI workflow" }
       ]
     },
     {
