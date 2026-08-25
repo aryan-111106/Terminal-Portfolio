@@ -531,27 +531,12 @@ ${e.details ? e.details.map(d => `   • ${d}`).join('\n') : ''}`).join('\n\n');
       name: 'resume',
       aliases: ['cv', 'resume.pdf', './resume.pdf', 'cv.pdf', 'view-resume', 'get-resume'],
       category: 'Portfolio',
-      description: 'Open or download curriculum vitae (PDF)',
+      description: 'View interactive curriculum vitae and qualifications in terminal',
       usage: 'resume',
-      execute: () => {
-        if (typeof document !== 'undefined') {
-          try {
-            const a = document.createElement('a');
-            a.href = portfolioConfig.resumeUrl || '/resume.pdf';
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          } catch {
-            // Popup blocker fallback
-          }
-        }
-        return {
-          output: '',
-          type: 'resume'
-        };
-      }
+      execute: () => ({
+        output: '',
+        type: 'resume'
+      })
     });
 
     this.register({
