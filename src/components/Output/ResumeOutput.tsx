@@ -120,7 +120,7 @@ export const ResumeOutput: React.FC = () => {
             <div className="p-2.5 bg-black/40 border border-slate-800 rounded">
               <span className="text-emerald-300 font-bold block mb-1">Programming Languages:</span>
               <div className="text-gray-300 flex flex-wrap gap-1.5">
-                {["Python (Advanced)", "C", "JavaScript", "TypeScript", "SQL", "HTML5/CSS3"].map((s, i) => (
+                {["Python (Core & OOP)", "C", "SQL (Relational)", "TypeScript", "JavaScript", "HTML5 & CSS3"].map((s, i) => (
                   <span key={i} className="px-2 py-0.5 bg-slate-900 border border-slate-700 rounded text-[11px] text-gray-200">
                     {s}
                   </span>
@@ -129,9 +129,9 @@ export const ResumeOutput: React.FC = () => {
             </div>
 
             <div className="p-2.5 bg-black/40 border border-slate-800 rounded">
-              <span className="text-emerald-300 font-bold block mb-1">AI & Machine Learning:</span>
+              <span className="text-emerald-300 font-bold block mb-1">AI, LLMs & Computer Vision:</span>
               <div className="text-gray-300 flex flex-wrap gap-1.5">
-                {["Machine Learning", "OpenCV", "Gemini API", "AI Agents", "LLM Integration", "Pandas", "NumPy", "Scikit-Learn"].map((s, i) => (
+                {["Gemini API", "OpenAI API", "Groq API", "Ollama", "VectorDB & RAG", "OpenCV", "NumPy", "Pandas"].map((s, i) => (
                   <span key={i} className="px-2 py-0.5 bg-slate-900 border border-slate-700 rounded text-[11px] text-purple-300">
                     {s}
                   </span>
@@ -140,9 +140,9 @@ export const ResumeOutput: React.FC = () => {
             </div>
 
             <div className="p-2.5 bg-black/40 border border-slate-800 rounded">
-              <span className="text-emerald-300 font-bold block mb-1">Developer Tools & Platforms:</span>
+              <span className="text-emerald-300 font-bold block mb-1">Web & Backend Engineering:</span>
               <div className="text-gray-300 flex flex-wrap gap-1.5">
-                {["Git", "GitHub", "VS Code", "Linux / Bash", "Jupyter Notebook", "Oracle Cloud (OCI)", "Vite"].map((s, i) => (
+                {["FastAPI", "Flask", "Node.js", "React.js", "Firebase", "RESTful APIs", "JSON Schemas"].map((s, i) => (
                   <span key={i} className="px-2 py-0.5 bg-slate-900 border border-slate-700 rounded text-[11px] text-sky-300">
                     {s}
                   </span>
@@ -151,9 +151,9 @@ export const ResumeOutput: React.FC = () => {
             </div>
 
             <div className="p-2.5 bg-black/40 border border-slate-800 rounded">
-              <span className="text-emerald-300 font-bold block mb-1">Core Fundamentals:</span>
+              <span className="text-emerald-300 font-bold block mb-1">DevOps, Tools & Environment:</span>
               <div className="text-gray-300 flex flex-wrap gap-1.5">
-                {["Data Structures & Algorithms (DSA)", "Object-Oriented Programming (OOP)", "Computer Vision", "Model Evaluation"].map((s, i) => (
+                {["Git & GitHub", "Docker", "Linux / Bash", "Vercel", "Anaconda", "Figma", "Notion"].map((s, i) => (
                   <span key={i} className="px-2 py-0.5 bg-slate-900 border border-slate-700 rounded text-[11px] text-amber-300">
                     {s}
                   </span>

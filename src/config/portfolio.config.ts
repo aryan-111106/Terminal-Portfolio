@@ -75,36 +75,39 @@ export const portfolioConfig: PortfolioConfig = {
     {
       category: "Programming Languages",
       skills: [
-        { name: "Python (Core, OOP, Scripting)", level: 90, description: "" },
-        { name: "C", level: 80, description: "" },
-        { name: "TypeScript / JavaScript", level: 25, description: "" },
-        { name: "SQL", level: 60, description: "" }
+        { name: "Python", level: 90, description: "Core Python, OOP, Async programming, Scripting & Automation" },
+        { name: "C", level: 80, description: "Systems programming, Pointers, Memory management, Computational algorithms" },
+        { name: "SQL", level: 75, description: "Relational database queries, Schema design, Joins, Data integrity" },
+        { name: "TypeScript & JavaScript", level: 75, description: "Modern ES6+, Asynchronous workflows, Type-safe development" }
       ]
     },
     {
-      category: "Frontend",
+      category: "AI, LLMs & Computer Vision",
       skills: [
-        { name: "HTML/CSS", level: 80, description: "" },
-        { name: "React", level: 25, description: "" },
-        { name: "Streamlit", level: 50, description: "" }
+        { name: "Generative AI & LLM APIs", level: 88, description: "Gemini API, OpenAI API, Groq API, Function calling & Prompt engineering" },
+        { name: "Local AI & Ollama", level: 78, description: "Ollama local inference, Open-weight models, Model serving" },
+        { name: "Vector Databases & RAG", level: 76, description: "VectorDB, Embeddings, Semantic search & Context retrieval" },
+        { name: "Computer Vision (OpenCV)", level: 80, description: "Real-time image/video processing, Contour detection, OCR pipelines" },
+        { name: "Data Science (NumPy & Pandas)", level: 85, description: "NumPy arrays, Pandas DataFrames, Data wrangling & Feature engineering" }
       ]
     },
     {
-      category: "AI, ML & Computer Vision",
+      category: "Web & Backend Development",
       skills: [
-        { name: "Machine Learning & Computer Vision", level: 20, description: "Fundamentals" },
-        { name: "AI Tools", level: 30, description: "Claude Code, Antigravity, Opencode" },
-        { name: "Pandas & NumPy", level: 50, description: "Data cleaning, Feature engineering" },
-        { name: "Generative AI", level: 25, description: "Gemini API, Groq, LangChain" }
+        { name: "Backend Frameworks (FastAPI & Flask)", level: 82, description: "FastAPI, Flask, RESTful API architecture, Swagger docs, Routing" },
+        { name: "Node.js & Server Runtime", level: 72, description: "Node.js runtime environment, npm package ecosystem, Server scripts" },
+        { name: "Frontend (React, HTML5 & CSS3)", level: 78, description: "React component architecture, Hooks, HTML5 semantic structure, Modern CSS" },
+        { name: "Cloud BaaS (Firebase)", level: 75, description: "Firebase Authentication, Firestore, Realtime database integration" }
       ]
     },
     {
-      category: "Core Computer Science & Cloud",
+      category: "DevOps, Tools & Environment",
       skills: [
-        { name: "Data Structures & Algorithms (DSA)", level: 25, description: "Problem solving, arrays, recursion, complexity analysis" },
-        { name: "Deployment and Cloud", level: 30, description: "Vercel" },
-        { name: "Git & GitHub", level: 85, description: "Version control, multi-repository management, open-source" },
-        { name: "Database & OS Fundamentals", level: 30, description: "DBMS schemas, OS processes, Linux CLI workflow" }
+        { name: "Git & GitHub", level: 90, description: "Branching strategies, Multi-repo management, Open-source collaboration" },
+        { name: "Deployment & Hosting (Vercel)", level: 82, description: "Vercel deployments, CI/CD automated builds, SPA routing rules" },
+        { name: "Docker & Containerization", level: 70, description: "Dockerfiles, Containerization basics, Isolated environments" },
+        { name: "Environment & OS (Linux & Anaconda)", level: 84, description: "Linux CLI / Bash scripting, Anaconda environments, Package dependencies" },
+        { name: "Design & Workspace (Figma & Notion)", level: 80, description: "Figma UI/UX wireframing, Notion technical documentation & Project tracking" }
       ]
     },
     {
