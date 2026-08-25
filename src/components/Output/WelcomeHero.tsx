@@ -13,20 +13,22 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
         {/* Left: ASCII Portrait */}
         {portfolioConfig.asciiPortrait && (
           <div className="shrink-0 flex flex-col items-center">
-            <pre className="text-emerald-400 font-bold leading-none select-none text-[11px] md:text-xs drop-shadow-sm whitespace-pre">
+            <pre className="text-emerald-400 font-bold leading-none select-none text-[6.5px] sm:text-[8px] md:text-[9.5px] drop-shadow-sm whitespace-pre">
               {portfolioConfig.asciiPortrait.trim()}
             </pre>
-            <span className="text-[10px] text-gray-500 mt-1 uppercase tracking-widest">[ AVATAR ]</span>
+            <span className="text-[10px] text-emerald-500/70 mt-1 uppercase tracking-widest font-mono">[ AVENGERS ]</span>
           </div>
         )}
 
         {/* Right: Big ASCII Name + Welcome message */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-2 overflow-x-auto w-full">
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-2 overflow-hidden w-full">
           {/* Big ASCII Name Banner */}
           {portfolioConfig.asciiName && (
-            <pre className="text-emerald-400 font-bold leading-none select-none text-[8px] sm:text-[9px] md:text-[11px] overflow-x-auto max-w-full whitespace-pre">
-              {portfolioConfig.asciiName.trim()}
-            </pre>
+            <div className="w-full overflow-x-auto no-scrollbar">
+              <pre className="text-emerald-400 font-bold leading-none select-none text-[7.5px] sm:text-[9px] md:text-[10.5px] whitespace-pre no-scrollbar">
+                {portfolioConfig.asciiName.trim()}
+              </pre>
+            </div>
           )}
 
           {/* Welcome Taglines */}
