@@ -32,8 +32,11 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-2 overflow-hidden w-full">
           {/* Big ASCII Name Banner */}
           {portfolioConfig.asciiName && (
-            <div className="w-full overflow-x-auto no-scrollbar">
-              <pre className="text-emerald-400 font-bold leading-none select-none text-[7.5px] sm:text-[9px] md:text-[10.5px] whitespace-pre no-scrollbar">
+            <div className="w-full overflow-x-auto no-scrollbar py-0.5">
+              <pre 
+                className="text-emerald-400 font-mono font-bold leading-[1.05] tracking-normal select-none text-[7px] sm:text-[8.5px] md:text-[10px] lg:text-[10.5px] whitespace-pre no-scrollbar"
+                style={{ fontVariantEastAsian: 'normal', fontFeatureSettings: '"tnum"' }}
+              >
                 {portfolioConfig.asciiName.trim()}
               </pre>
             </div>
