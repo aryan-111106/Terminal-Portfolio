@@ -37,9 +37,10 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
           {portfolioConfig.asciiName && (
             <div className="w-full overflow-x-auto no-scrollbar py-0.5">
               <pre 
-                className="text-emerald-400 font-mono font-bold select-none text-[6.5px] sm:text-[8px] md:text-[9.5px] lg:text-[10.5px] whitespace-pre no-scrollbar"
+                className="text-emerald-400 select-none text-[6.5px] sm:text-[8px] md:text-[9.5px] lg:text-[10.5px] whitespace-pre no-scrollbar font-normal"
                 style={{ 
-                  lineHeight: '1.0', 
+                  fontFamily: 'Consolas, "Courier New", "Liberation Mono", monospace',
+                  lineHeight: '1.05', 
                   letterSpacing: '0px',
                   fontVariantEastAsian: 'normal', 
                   fontFeatureSettings: '"tnum"' 
