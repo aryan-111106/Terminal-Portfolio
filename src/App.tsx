@@ -10,6 +10,7 @@ import { PowerOverlay, PowerState } from './components/Terminal/PowerOverlay';
 import { MatrixRain } from './components/EasterEggs/MatrixRain';
 import { SnakeGame } from './components/EasterEggs/SnakeGame';
 import { SteamLocomotive } from './components/EasterEggs/SteamLocomotive';
+import { VimEditor } from './components/EasterEggs/VimEditor';
 import { ThemeBackground } from './components/UI/ThemeBackground';
 import { Terminal as TerminalIcon } from 'lucide-react';
 
@@ -178,6 +179,21 @@ export function App() {
       {activeEasterEgg === 'sl' && (
         <SteamLocomotive 
           onComplete={() => setActiveEasterEgg(null)} 
+        />
+      )}
+
+      {activeEasterEgg?.startsWith('vim') && (
+        <VimEditor 
+          filePath={activeEasterEgg.includes(':') ? activeEasterEgg.substring(4) : undefined}
+          cwd={cwd}
+          theme={theme}
+          onClose={(msg) => {
+            setActiveEasterEgg(null);
+            if (msg) {
+              executeCommand(`echo "${msg}"`);
+            }
+            setTimeout(focusInput, 50);
+          }}
         />
       )}
     </main>

@@ -736,14 +736,18 @@ USAGE: theme <theme_name>  (e.g., 'theme dracula' or 'theme nord')`,
 
     this.register({
       name: 'vim',
-      aliases: ['vi', 'nano', 'emacs'],
+      aliases: ['vi', 'nano', 'emacs', 'edit'],
       category: 'Easter Eggs',
-      description: 'Open a mock terminal text editor',
+      description: 'Open full interactive in-terminal Vim text editor to create and edit files',
       usage: 'vim [filename]',
-      execute: (args) => ({
-        output: `[VIM] Opening ${args[0] || 'buffer'} in read-only mode...\nTip: Type ':q!' to exit, or just use 'cat' to view files!`,
-        type: 'warning'
-      })
+      execute: (args, ctx) => {
+        const fileTarget = args[0] || '';
+        ctx.setActiveEasterEgg(fileTarget ? `vim:${fileTarget}` : 'vim');
+        return {
+          output: `Opening Vim editor for '${fileTarget || 'untitled.txt'}'... (Press 'i' to edit, ':wq' or button to save & exit)`,
+          type: 'success'
+        };
+      }
     });
 
     this.register({
