@@ -120,7 +120,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Built with Python to assist the agricultural sector with data-driven decision making, crop health monitoring, and personalized farming guidance.",
       tags: ["Python", "AI / ML", "AgriTech", "Data Analytics"],
       githubUrl: "https://github.com/aryan-111106/AgriSathi",
-      stars: 12,
+      stars: 0,
       stats: "Python • Active Development"
     },
     {
@@ -132,7 +132,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Integrates with Google Gemini models to provide real-time reasoning, document analysis, and natural language assistant capabilities.",
       tags: ["Python", "Google Gemini API", "Generative AI", "LLMs"],
       githubUrl: "https://github.com/aryan-111106/gemini-assistant",
-      stars: 15,
+      stars: 0,
       stats: "Python • Google Gemini API"
     },
     {
@@ -144,7 +144,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Features voice command processing, text-to-speech feedback, desktop system controls, and automated internet lookups.",
       tags: ["Python", "Voice AI", "Automation", "Speech Recognition"],
       githubUrl: "https://github.com/aryan-111106/JARVIS",
-      stars: 18,
+      stars: 0,
       stats: "Python • Voice Automation"
     },
     {
@@ -156,7 +156,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Utilizes Python and OpenCV for image preprocessing, contour detection, and optical character recognition on vehicle plates.",
       tags: ["Python", "Computer Vision", "OpenCV", "Image Processing"],
       githubUrl: "https://github.com/aryan-111106/Number-Plate",
-      stars: 14,
+      stars: 0,
       stats: "Python • Computer Vision"
     },
     {
@@ -168,7 +168,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Developed in TypeScript with an interactive user interface for organizing monthly budgets, categorizing transactions, and monitoring spending trends.",
       tags: ["TypeScript", "Web App", "Finance", "UI / UX"],
       githubUrl: "https://github.com/aryan-111106/BudgetBuddy",
-      stars: 8,
+      stars: 0,
       stats: "TypeScript"
     },
     {
@@ -180,7 +180,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Detailed implementations covering linear and non-linear data structures, searching, sorting, and algorithmic complexity evaluations.",
       tags: ["Jupyter Notebook", "Python", "DSA", "Algorithms"],
       githubUrl: "https://github.com/aryan-111106/Data-Structures-and-Algorithms",
-      stars: 20,
+      stars: 0,
       stats: "Jupyter Notebook • Python"
     },
     {
@@ -192,7 +192,7 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Provides developer-friendly color scheme generation, hex/RGB conversions, and real-time contrast previews for game and UI design.",
       tags: ["TypeScript", "Frontend", "Theme Generator", "UI"],
       githubUrl: "https://github.com/aryan-111106/Gamer-color",
-      stars: 6,
+      stars: 0,
       stats: "TypeScript"
     },
     {
@@ -204,36 +204,37 @@ export const portfolioConfig: PortfolioConfig = {
       longDescription: "Contains structured C implementations of foundational computing algorithms, pointers, memory allocation, and lab exercises.",
       tags: ["C", "Computer Science", "Academic", "Algorithms"],
       githubUrl: "https://github.com/aryan-111106/College",
-      stars: 5,
+      stars: 0,
       stats: "C Programming"
     }
   ],
 
   experience: [
     {
-      company: "Deloitte Australia",
-      role: "Data Analytics Job Simulation",
-      period: "2025",
-      location: "Remote / Australia",
-      current: false,
+      company: "Self-Directed & Academic Projects",
+      role: "Student AI/ML Developer",
+      period: "2025 — Present",
+      location: "Haldia Institute of Technology / Remote",
+      current: true,
       description: [
-        "Completed practical job simulation tasks in exploratory data analysis, data cleansing, and trend forecasting.",
-        "Synthesized large telemetry datasets using Python and Pandas to generate executive-level statistical summaries.",
-        "Identified business insights and communicated data-driven recommendations."
+        "Architecting and building hands-on Machine Learning, Computer Vision, and AI-driven applications using Python, OpenCV, and the Gemini API.",
+        "Developing real-world problem-solving projects including AgriSathi (smart crop assistant), JARVIS (voice automation), and Number-Plate Recognition.",
+        "Actively practicing Data Structures & Algorithms (DSA) in Python and C to build strong computational fundamentals."
       ],
-      technologies: ["Python", "Pandas", "Data Analytics", "Data Visualization"]
+      technologies: ["Python", "Machine Learning", "OpenCV", "DSA", "Gemini API", "Git"]
     },
     {
-      company: "Google Developers / DeepLearning",
-      role: "5-Day AI Agents Intensive Course Trainee",
-      period: "2025",
-      location: "Remote",
-      current: false,
+      company: "Open Source & Developer Community",
+      role: "Open Source Contributor & Continuous Learner",
+      period: "2024 — Present",
+      location: "GitHub / Global",
+      current: true,
       description: [
-        "Trained on modern AI Agent architectures, tool-calling pipelines, and autonomous agent collaboration.",
-        "Built generative AI workflows leveraging prompt engineering, embeddings, and API integrations."
+        "Publishing and maintaining modular open-source repositories and utility projects on GitHub.",
+        "Completed certified coursework in Oracle OCI AI Foundations, IIT NPTEL Python programming, and AI Agent workflows.",
+        "Collaborating with peers on technical coursework, algorithms, and exploratory AI tools."
       ],
-      technologies: ["Generative AI", "Python", "AI Agents", "LLMs", "Google AI"]
+      technologies: ["Git", "GitHub", "Python", "Linux", "Generative AI", "C"]
     }
   ],
 

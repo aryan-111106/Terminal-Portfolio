@@ -250,4 +250,4 @@ export const THEMES: Record<string, TerminalTheme> = {
   }
 };
 
-export const DEFAULT_THEME_ID = 'matrix-green';
+export const DEFAULT_THEME_ID = 'ubuntu';

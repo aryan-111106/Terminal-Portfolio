@@ -269,7 +269,7 @@ export const ResumeOutput: React.FC = () => {
         <div className="space-y-3">
           <h2 className="text-xs md:text-sm font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2 border-b border-emerald-500/20 pb-1">
             <Briefcase className="w-4 h-4 text-emerald-400" />
-            <span>06. Experience & Training Simulations</span>
+            <span>06. Practical Engineering & Project Experience</span>
           </h2>
 
           <div className="space-y-2.5">
