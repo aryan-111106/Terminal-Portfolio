@@ -124,41 +124,59 @@ export function App() {
           hostname={hostname}
         />
 
-        {/* Quick Action Navigation Bar */}
-        <QuickActions 
-          onExecute={executeCommand}
-          theme={theme}
-        />
+        {/* Terminal Content: Vim Editor OR Standard Shell Stream */}
+        {activeEasterEgg?.startsWith('vim') ? (
+          <VimEditor 
+            filePath={activeEasterEgg.includes(':') ? activeEasterEgg.substring(4) : undefined}
+            cwd={cwd}
+            theme={theme}
+            onClose={(msg) => {
+              setActiveEasterEgg(null);
+              if (msg) {
+                executeCommand(`echo "${msg}"`);
+              }
+              setTimeout(focusInput, 50);
+            }}
+          />
+        ) : (
+          <>
+            {/* Quick Action Navigation Bar */}
+            <QuickActions 
+              onExecute={executeCommand}
+              theme={theme}
+            />
 
-        {/* Main Terminal Stream (History + Live Prompt) */}
-        <TerminalBody
-          history={history}
-          user={user}
-          hostname={hostname}
-          cwd={cwd}
-          input={input}
-          setInput={setInput}
-          inputRef={inputRef}
-          bottomRef={bottomRef}
-          onKeyDown={handleKeyDown}
-          onFocus={focusInput}
-          suggestions={suggestions}
-          onSelectSuggestion={(s) => {
-            setInput(s + ' ');
-            focusInput();
-          }}
-          onExecute={executeCommand}
-          theme={theme}
-        />
+            {/* Main Terminal Stream (History + Live Prompt) */}
+            <TerminalBody
+              history={history}
+              user={user}
+              hostname={hostname}
+              cwd={cwd}
+              input={input}
+              setInput={setInput}
+              inputRef={inputRef}
+              bottomRef={bottomRef}
+              onKeyDown={handleKeyDown}
+              onFocus={focusInput}
+              suggestions={suggestions}
+              onSelectSuggestion={(s) => {
+                setInput(s + ' ');
+                focusInput();
+              }}
+              onExecute={executeCommand}
+              theme={theme}
+            />
 
-        {/* Bottom Status Bar */}
-        <StatusBar
-          theme={theme}
-          cwd={cwd}
-          commandCount={history.length}
-          soundEnabled={soundEnabled}
-          crtEnabled={crtEnabled}
-        />
+            {/* Bottom Status Bar */}
+            <StatusBar
+              theme={theme}
+              cwd={cwd}
+              commandCount={history.length}
+              soundEnabled={soundEnabled}
+              crtEnabled={crtEnabled}
+            />
+          </>
+        )}
       </div>
 
       {/* Interactive Easter Egg Overlays */}
@@ -179,21 +197,6 @@ export function App() {
       {activeEasterEgg === 'sl' && (
         <SteamLocomotive 
           onComplete={() => setActiveEasterEgg(null)} 
-        />
-      )}
-
-      {activeEasterEgg?.startsWith('vim') && (
-        <VimEditor 
-          filePath={activeEasterEgg.includes(':') ? activeEasterEgg.substring(4) : undefined}
-          cwd={cwd}
-          theme={theme}
-          onClose={(msg) => {
-            setActiveEasterEgg(null);
-            if (msg) {
-              executeCommand(`echo "${msg}"`);
-            }
-            setTimeout(focusInput, 50);
-          }}
         />
       )}
     </main>
