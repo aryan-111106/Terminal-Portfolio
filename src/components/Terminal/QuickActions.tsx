@@ -1,6 +1,6 @@
 import React from 'react';
 import { TerminalTheme } from '../../config/themes';
-import { Terminal, FolderGit2, Cpu, History, Mail, FileText, Gamepad2, Binary, HelpCircle, Trash2 } from 'lucide-react';
+import { Terminal, FolderGit2, Cpu, History, Mail, FileText, HelpCircle, Trash2 } from 'lucide-react';
 
 interface QuickActionsProps {
   onExecute: (cmd: string) => void;
@@ -15,10 +15,7 @@ export const QuickActions: React.FC<QuickActionsProps> = ({ onExecute, theme }) 
     { label: 'certs', cmd: 'certifications', icon: <FileText className="w-3 h-3" /> },
     { label: 'education', cmd: 'education', icon: <History className="w-3 h-3" /> },
     { label: 'contact', cmd: 'contact', icon: <Mail className="w-3 h-3" /> },
-    { label: 'whoami', cmd: 'whoami', icon: <Terminal className="w-3 h-3" /> },
-    { label: 'sysinfo', cmd: 'sysinfo', icon: <Cpu className="w-3 h-3" /> },
-    { label: 'snake', cmd: 'snake', icon: <Gamepad2 className="w-3 h-3" /> },
-    { label: 'matrix', cmd: 'matrix', icon: <Binary className="w-3 h-3" /> },
+    { label: 'resume', cmd: 'resume', icon: <FileText className="w-3 h-3" /> },
     { label: 'help', cmd: 'help', icon: <HelpCircle className="w-3 h-3" /> },
     { label: 'clear', cmd: 'clear', icon: <Trash2 className="w-3 h-3" /> },
   ];

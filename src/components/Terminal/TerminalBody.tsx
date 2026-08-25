@@ -28,6 +28,7 @@ interface TerminalBodyProps {
   onFocus: () => void;
   suggestions: string[];
   onSelectSuggestion: (s: string) => void;
+  onExecute?: (cmd: string) => void;
   theme: TerminalTheme;
 }
 
@@ -44,6 +45,7 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
   onFocus,
   suggestions,
   onSelectSuggestion,
+  onExecute,
   theme,
 }) => {
   const renderHelpOutput = () => {
@@ -67,11 +69,11 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
               <h4 className="text-xs font-bold text-emerald-300 mb-1.5 uppercase tracking-wider">
                 [{cat}]
               </h4>
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 {cmds.map(c => (
-                  <div key={c.name} className="flex items-start text-xs">
-                    <span className="font-semibold text-emerald-400 w-24 shrink-0">{c.name}</span>
-                    <span className="text-gray-300">{c.description}</span>
+                  <div key={c.name} className="flex items-baseline gap-2 text-xs">
+                    <span className="font-bold text-emerald-400 w-36 md:w-40 shrink-0 font-mono">{c.name}</span>
+                    <span className="text-gray-300 leading-snug">{c.description}</span>
                   </div>
                 ))}
               </div>
@@ -88,7 +90,7 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
 
   const renderHistoryOutput = (item: CommandHistoryItem) => {
     if (item.type === 'welcome') {
-      return <WelcomeHero />;
+      return <WelcomeHero onExecute={onExecute} />;
     }
     if (item.type === 'whoami') {
       return <WhoamiOutput />;
@@ -103,7 +105,7 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
       return <NeofetchOutput />;
     }
     if (item.type === 'projects') {
-      return <ProjectsOutput filter={item.rawArgs?.[0]} />;
+      return <ProjectsOutput filter={item.rawArgs?.[0]} onExecute={onExecute} />;
     }
     if (item.type === 'skills') {
       return <SkillsOutput />;

@@ -142,6 +142,7 @@ export function App() {
             setInput(s + ' ');
             focusInput();
           }}
+          onExecute={executeCommand}
           theme={theme}
         />
 

@@ -185,12 +185,30 @@ DESCRIPTION:
     this.register({
       name: 'uptime',
       category: 'System',
-      description: 'Tell how long the portfolio shell has been running',
+      description: 'Display system uptime elapsed since portfolio release',
       usage: 'uptime',
-      execute: () => ({
-        output: `${new Date().toLocaleTimeString()} up 42 days, 13:37, 1 user, load average: 0.08, 0.03, 0.01`,
-        type: 'text'
-      })
+      execute: () => {
+        // Release build timestamp
+        const BUILD_TIMESTAMP = new Date('2026-08-25T08:00:00Z').getTime();
+        const diffMs = Math.max(1000, Date.now() - BUILD_TIMESTAMP);
+        const totalSec = Math.floor(diffMs / 1000);
+        const days = Math.floor(totalSec / 86400);
+        const hours = Math.floor((totalSec % 86400) / 3600);
+        const minutes = Math.floor((totalSec % 3600) / 60);
+        const timeStr = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+        let uptimeStr = '';
+        if (days > 0) {
+          uptimeStr = `${days} day${days > 1 ? 's' : ''}, ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+        } else {
+          uptimeStr = `${hours}h ${minutes}m`;
+        }
+
+        return {
+          output: `${timeStr} up ${uptimeStr}, 1 user, load average: 0.12, 0.08, 0.03`,
+          type: 'text'
+        };
+      }
     });
 
     this.register({
@@ -616,7 +634,7 @@ USAGE: theme <theme_name>  (e.g., 'theme dracula' or 'theme nord')`,
     // ==========================================
     this.register({
       name: 'neofetch',
-      aliases: ['fastfetch', 'sysinfo', 'fetch'],
+      aliases: ['fastfetch', 'fetch', 'logo'],
       category: 'Easter Eggs',
       description: 'Display system info and aesthetic ASCII portfolio logo',
       usage: 'neofetch',
@@ -759,23 +777,6 @@ USAGE: theme <theme_name>  (e.g., 'theme dracula' or 'theme nord')`,
         }
         return {
           output: 'Initiating terminal shutdown sequence... [ OK ]',
-          type: 'warning'
-        };
-      }
-    });
-
-    this.register({
-      name: 'exit',
-      aliases: ['quit'],
-      category: 'System',
-      description: 'Simulate terminal shutdown and disable input until power on',
-      usage: 'exit',
-      execute: (_, ctx) => {
-        if (ctx.triggerShutdown) {
-          ctx.triggerShutdown();
-        }
-        return {
-          output: 'Closing session... shutting down system.',
           type: 'warning'
         };
       }

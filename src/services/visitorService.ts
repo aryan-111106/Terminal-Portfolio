@@ -23,10 +23,15 @@ export interface VisitorLocation {
   region: string;
   country: string;
   countryCode: string;
+  postalCode?: string;
   latitude: number;
   longitude: number;
   timezone: string;
   isp: string;
+  org?: string;
+  asn?: string;
+  currency?: string;
+  vpn?: string;
 }
 
 export interface VisitorWeather {
@@ -143,10 +148,15 @@ class VisitorService {
               region: data.region || '',
               country: data.country || 'Earth',
               countryCode: data.country_code || 'UN',
-              latitude: data.latitude || 37.7749,
-              longitude: data.longitude || -122.4194,
+              postalCode: data.postal || 'N/A',
+              latitude: data.latitude || 22.5726,
+              longitude: data.longitude || 88.3639,
               timezone: data.timezone?.id || Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC',
               isp: data.connection?.isp || 'Internet Service Provider',
+              org: data.connection?.org || data.connection?.isp || 'Internet Service Provider',
+              asn: data.connection?.asn ? `AS${data.connection.asn}` : 'AS55836',
+              currency: data.currency?.code || 'INR',
+              vpn: data.security?.vpn || data.security?.proxy ? 'Active' : 'N/A',
             };
             return this.cachedLocation;
           }
