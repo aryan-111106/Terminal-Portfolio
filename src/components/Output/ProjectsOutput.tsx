@@ -144,7 +144,7 @@ export const ProjectsOutput: React.FC<ProjectsOutputProps> = ({ filter }) => {
                       FEATURED
                     </span>
                   )}
-                  {proj.stars && (
+                  {proj.stars !== undefined && proj.stars > 0 && (
                     <span className="flex items-center gap-1 text-xs text-yellow-400 font-medium">
                       <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                       {proj.stars}
