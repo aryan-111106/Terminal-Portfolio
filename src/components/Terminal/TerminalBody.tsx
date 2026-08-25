@@ -9,9 +9,11 @@ import { NeofetchOutput } from '../Output/NeofetchOutput';
 import { ProjectsOutput } from '../Output/ProjectsOutput';
 import { SkillsOutput } from '../Output/SkillsOutput';
 import { ExperienceOutput } from '../Output/ExperienceOutput';
+import { CertificationsOutput } from '../Output/CertificationsOutput';
 import { AboutOutput } from '../Output/AboutOutput';
 import { ContactOutput } from '../Output/ContactOutput';
 import { ResumeOutput } from '../Output/ResumeOutput';
+import { GithubStatsOutput } from '../Output/GithubStatsOutput';
 import { Cowsay } from '../EasterEggs/Cowsay';
 import { TerminalPrompt } from './TerminalPrompt';
 import { commandRegistry } from '../../services/commandRegistry';
@@ -114,6 +116,9 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
     if (item.type === 'experience') {
       return <ExperienceOutput />;
     }
+    if (item.type === 'certifications') {
+      return <CertificationsOutput />;
+    }
     if (item.type === 'about') {
       return <AboutOutput />;
     }
@@ -122,6 +127,9 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
     }
     if (item.type === 'resume') {
       return <ResumeOutput />;
+    }
+    if (item.type === 'github') {
+      return <GithubStatsOutput onExecute={onExecute} />;
     }
     if (item.type === 'help') {
       return renderHelpOutput();

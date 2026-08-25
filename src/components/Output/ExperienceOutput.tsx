@@ -4,8 +4,8 @@ import { Briefcase, Compass, Sparkles } from 'lucide-react';
 
 export const ExperienceOutput: React.FC = () => {
   return (
-    <div className="my-3 space-y-4 font-mono text-sm max-w-3xl">
-      <div className="text-emerald-400 font-bold border-b border-emerald-500/30 pb-1 flex items-center justify-between">
+    <div className="my-3 space-y-4 font-mono text-xs md:text-sm select-text w-full">
+      <div className="text-emerald-400 font-bold border-b border-emerald-500/30 pb-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
         <span className="flex items-center gap-2">
           <Briefcase className="w-4 h-4 text-emerald-400" />
           <span>PRACTICAL EXPERIENCE & ENGINEERING JOURNEY</span>
@@ -33,15 +33,15 @@ export const ExperienceOutput: React.FC = () => {
             {/* Timeline Dot */}
             <div className={`absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 ${exp.current ? 'bg-emerald-400 border-emerald-300 animate-pulse' : 'bg-slate-900 border-emerald-500/50'}`} />
 
-            <div className="p-3 bg-black/40 border border-emerald-500/30 rounded-md shadow-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-                <h3 className="font-bold text-emerald-300 text-sm flex items-center gap-1.5">
-                  <Compass className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>{exp.role}</span>
+            <div className="p-3.5 bg-black/40 border border-emerald-500/30 rounded-lg shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-1.5">
+                <div className="flex items-start gap-1.5 flex-wrap flex-1">
+                  <Compass className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                  <span className="font-bold text-emerald-300 text-xs md:text-sm">{exp.role}</span>
                   <span className="text-gray-400 font-normal">@</span>
-                  <span className="text-white">{exp.company}</span>
-                </h3>
-                <span className="text-xs text-emerald-400/90 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40 shrink-0">
+                  <span className="font-semibold text-white">{exp.company}</span>
+                </div>
+                <span className="text-xs text-emerald-400/90 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40 shrink-0 self-start">
                   {exp.period}
                 </span>
               </div>

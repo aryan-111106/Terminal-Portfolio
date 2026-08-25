@@ -505,22 +505,14 @@ ${e.details ? e.details.map(d => `   • ${d}`).join('\n') : ''}`).join('\n\n');
 
     this.register({
       name: 'certifications',
-      aliases: ['certs', 'certification', 'awards', 'honors'],
+      aliases: ['certs', 'certification', 'awards', 'honors', 'certificate', 'certificates'],
       category: 'Portfolio',
       description: 'View industry certifications, courses, and honors',
       usage: 'certifications',
-      execute: () => {
-        const certList = (portfolioConfig.certifications || []).map(c => `📜 ${c.title}
-   Issuer: ${c.issuer} | Year: ${c.year || '2025'}`).join('\n\n');
-
-        const awardList = (portfolioConfig.awards || []).map(a => `🏆 ${a.title}
-   Issuer: ${a.issuer || 'Award'} | ${a.year || ''}`).join('\n\n');
-
-        return {
-          output: `[ PROFESSIONAL CERTIFICATIONS & COURSES ]\n\n${certList}\n\n[ HONORS & AWARDS ]\n\n${awardList}`,
-          type: 'info'
-        };
-      }
+      execute: () => ({
+        output: '',
+        type: 'certifications'
+      })
     });
 
     this.register({
@@ -560,6 +552,17 @@ ${e.details ? e.details.map(d => `   • ${d}`).join('\n') : ''}`).join('\n\n');
           type: 'resume'
         };
       }
+    });
+
+    this.register({
+      name: 'github',
+      category: 'Portfolio',
+      description: 'View real GitHub telemetry, contribution heatmap and public repos',
+      usage: 'github',
+      execute: () => ({
+        output: '',
+        type: 'github'
+      })
     });
 
     // ==========================================

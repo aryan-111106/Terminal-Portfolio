@@ -19,7 +19,7 @@ export const ResumeOutput: React.FC = () => {
   const resumeUrl = portfolioConfig.resumeUrl || '/resume.pdf';
 
   return (
-    <div className="my-3 space-y-4 font-mono text-xs md:text-sm select-text w-full max-w-4xl">
+    <div className="my-3 space-y-4 font-mono text-xs md:text-sm select-text w-full">
       {/* Top Controls Banner */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-3 bg-black/60 border border-emerald-500/40 rounded-lg shadow-lg">
         <div className="flex items-center gap-2">
@@ -61,17 +61,17 @@ export const ResumeOutput: React.FC = () => {
         
         {/* Header Section */}
         <div className="border-b border-emerald-500/30 pb-4 text-center md:text-left">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-3">
+            <div className="flex-1">
               <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
                 {portfolioConfig.name.toUpperCase()}
               </h1>
-              <p className="text-xs md:text-sm text-emerald-400 font-semibold mt-0.5">
+              <p className="text-xs md:text-sm text-emerald-400 font-semibold mt-0.5 leading-relaxed">
                 Aspiring AI/ML Engineer | Python • Machine Learning • Data Structures & Algorithms
               </p>
             </div>
-            <div className="text-xs text-gray-400 md:text-right">
-              <span className="px-2 py-0.5 bg-emerald-950 border border-emerald-600/60 text-emerald-300 rounded font-mono">
+            <div className="shrink-0">
+              <span className="inline-block px-3 py-1 bg-emerald-950/90 border border-emerald-600/70 text-emerald-300 rounded font-mono text-xs font-semibold whitespace-nowrap shadow-sm">
                 B.Tech CSE (AI & ML)
               </span>
             </div>

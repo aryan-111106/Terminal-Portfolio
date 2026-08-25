@@ -4,7 +4,7 @@ import { User, Heart, Sparkles, Compass } from 'lucide-react';
 
 export const AboutOutput: React.FC = () => {
   return (
-    <div className="my-3 space-y-4 font-mono text-sm max-w-3xl">
+    <div className="my-3 space-y-4 font-mono text-xs md:text-sm select-text w-full">
       <div className="text-emerald-400 font-bold border-b border-emerald-500/30 pb-1 flex items-center gap-2">
         <User className="w-4 h-4 text-emerald-400" />
         <span>ABOUT {portfolioConfig.name.toUpperCase()}</span>

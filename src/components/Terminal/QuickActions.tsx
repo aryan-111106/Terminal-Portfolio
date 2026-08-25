@@ -1,6 +1,7 @@
 import React from 'react';
 import { TerminalTheme } from '../../config/themes';
 import { Terminal, FolderGit2, Cpu, Briefcase, History, FileText, Mail, HelpCircle, Trash2 } from 'lucide-react';
+import { GithubIcon } from '../UI/Icons';
 
 interface QuickActionsProps {
   onExecute: (cmd: string) => void;
@@ -11,6 +12,7 @@ export const QuickActions: React.FC<QuickActionsProps> = ({ onExecute, theme }) 
   const actions = [
     { label: 'about', cmd: 'about', icon: <Terminal className="w-3 h-3" /> },
     { label: 'projects', cmd: 'projects', icon: <FolderGit2 className="w-3 h-3" /> },
+    { label: 'github', cmd: 'github', icon: <GithubIcon className="w-3 h-3" /> },
     { label: 'skills', cmd: 'skills', icon: <Cpu className="w-3 h-3" /> },
     { label: 'experience', cmd: 'experience', icon: <Briefcase className="w-3 h-3" /> },
     { label: 'education', cmd: 'education', icon: <History className="w-3 h-3" /> },
