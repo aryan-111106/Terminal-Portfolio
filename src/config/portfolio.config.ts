@@ -75,34 +75,34 @@ export const portfolioConfig: PortfolioConfig = {
     {
       category: "Programming Languages",
       skills: [
-        { name: "Python (Core, OOP, Scripting)", level: 92, description: "Automation, AI/ML libraries, OpenCV, Gemini API, Desktop assistants" },
-        { name: "TypeScript / JavaScript", level: 82, description: "Web applications, React/Node development, interactive UIs" },
-        { name: "C / C++", level: 80, description: "Core data structures, memory management, academic algorithms" },
-        { name: "SQL & Shell", level: 78, description: "Database querying, Linux Bash scripting, automation" }
+        { name: "Python (Core, OOP, Scripting)", level: 92, description: "" },
+        { name: "TypeScript / JavaScript", level: 30, description: "" },
+        { name: "C", level: 80, description: "" },
+        { name: "SQL", level: 78, description: "" }
       ]
     },
     {
       category: "AI, ML & Computer Vision",
       skills: [
-        { name: "Generative AI & Gemini API", level: 88, description: "Google Gemini API integrations, multimodal prompt engineering" },
-        { name: "Computer Vision & OpenCV", level: 84, description: "Image segmentation, ANPR number plate detection, OCR" },
-        { name: "Machine Learning (Scikit-Learn)", level: 85, description: "Supervised/unsupervised models, predictive analytics" },
-        { name: "Pandas & NumPy", level: 90, description: "Data wrangling, feature engineering, Jupyter notebooks" }
+        { name: "Generative AI", level: 88, description: "" },
+        { name: "Computer Vision & OpenCV", level: 30, description: "" },
+        { name: "Machine Learning", level: 30, description: "" },
+        { name: "Pandas & NumPy", level: 50, description: "" }
       ]
     },
     {
       category: "Core Computer Science & Cloud",
       skills: [
-        { name: "Data Structures & Algorithms (DSA)", level: 86, description: "Problem solving, arrays, trees, recursion, complexity analysis" },
-        { name: "Oracle Cloud Infrastructure (OCI AI)", level: 80, description: "OCI 2025 Certified AI Foundations Associate" },
+        { name: "Data Structures & Algorithms (DSA)", level: 30, description: "Problem solving, arrays, trees, recursion, complexity analysis" },
+        { name: "Deployment and Cloud", level: 80, description: "Vercel" },
         { name: "Git & GitHub", level: 88, description: "Version control, multi-repository management, open-source" },
-        { name: "Database & OS Fundamentals", level: 82, description: "DBMS schemas, OS processes, Linux CLI workflow" }
+        { name: "Database & OS Fundamentals", level: 60, description: "DBMS schemas, OS processes, Linux CLI workflow" }
       ]
     },
     {
       category: "Languages (Spoken)",
       skills: [
-        { name: "English", level: 95, description: "Professional working proficiency" },
+        { name: "English", level: 90, description: "Professional working proficiency" },
         { name: "Hindi", level: 100, description: "Native / Bilingual proficiency" },
         { name: "Bengali", level: 100, description: "Native / Bilingual proficiency" },
         { name: "Sanskrit & German", level: 50, description: "Elementary linguistic interest" }
@@ -118,7 +118,7 @@ export const portfolioConfig: PortfolioConfig = {
       featured: true,
       description: "Smart agricultural platform providing AI-driven crop disease diagnosis, weather insights, and advisory tools for farmers.",
       longDescription: "Built with Python to assist the agricultural sector with data-driven decision making, crop health monitoring, and personalized farming guidance.",
-      tags: ["Python", "AI / ML", "AgriTech", "Data Analytics"],
+      tags: ["Python", "Google Gemini API", "Telegram API", "Ngrok"],
       githubUrl: "https://github.com/aryan-111106/AgriSathi",
       stars: 0,
       stats: "Python • Active Development"
@@ -130,10 +130,10 @@ export const portfolioConfig: PortfolioConfig = {
       featured: true,
       description: "Generative AI conversational assistant built with Python and the Google Gemini API for intelligent question answering and multi-turn dialogue.",
       longDescription: "Integrates with Google Gemini models to provide real-time reasoning, document analysis, and natural language assistant capabilities.",
-      tags: ["Python", "Google Gemini API", "Generative AI", "LLMs"],
+      tags: ["Python", "Google Gemini API"],
       githubUrl: "https://github.com/aryan-111106/gemini-assistant",
       stars: 0,
-      stats: "Python • Google Gemini API"
+      stats: "Python • GenAI"
     },
     {
       id: "jarvis",
@@ -142,7 +142,7 @@ export const portfolioConfig: PortfolioConfig = {
       featured: true,
       description: "Desktop voice and task automation assistant in Python for system operations, speech recognition, and web queries.",
       longDescription: "Features voice command processing, text-to-speech feedback, desktop system controls, and automated internet lookups.",
-      tags: ["Python", "Voice AI", "Automation", "Speech Recognition"],
+      tags: ["Python", "FastAPI", "Langchain", "Groq"],
       githubUrl: "https://github.com/aryan-111106/JARVIS",
       stars: 0,
       stats: "Python • Voice Automation"
@@ -154,10 +154,10 @@ export const portfolioConfig: PortfolioConfig = {
       featured: true,
       description: "Computer vision and image processing application for detecting, isolating, and extracting vehicle license plate characters.",
       longDescription: "Utilizes Python and OpenCV for image preprocessing, contour detection, and optical character recognition on vehicle plates.",
-      tags: ["Python", "Computer Vision", "OpenCV", "Image Processing"],
+      tags: ["Python", "Flask", "OpenCV", "YOLO", "OCR"],
       githubUrl: "https://github.com/aryan-111106/Number-Plate",
       stars: 0,
-      stats: "Python • Computer Vision • OpenCV"
+      stats: "Python • Computer Vision"
     },
     {
       id: "budgetbuddy",
@@ -166,22 +166,22 @@ export const portfolioConfig: PortfolioConfig = {
       featured: false,
       description: "Personal finance and expense management web application designed for tracking budgets and expense categories.",
       longDescription: "Developed in TypeScript with an interactive user interface for organizing monthly budgets, categorizing transactions, and monitoring spending trends.",
-      tags: ["TypeScript", "Web App", "Finance", "UI / UX"],
+      tags: ["TypeScript", "React", "Gemini API"],
       githubUrl: "https://github.com/aryan-111106/BudgetBuddy",
       stars: 0,
-      stats: "TypeScript"
+      stats: "TypeScript • Finance"
     },
     {
       id: "dsa-repo",
       name: "Data Structures & Algorithms Suite",
-      category: "Systems / CLI",
+      category: "Development",
       featured: false,
-      description: "Comprehensive repository of Data Structures & Algorithms implementations, Jupyter notebooks, and problem-solving solutions.",
+      description: "Comprehensive repository of Data Structures & Algorithms implementations in Python.",
       longDescription: "Detailed implementations covering linear and non-linear data structures, searching, sorting, and algorithmic complexity evaluations.",
-      tags: ["Jupyter Notebook", "Python", "DSA", "Algorithms"],
+      tags: ["Jupyter Notebook", "Python", "DSA"],
       githubUrl: "https://github.com/aryan-111106/Data-Structures-and-Algorithms",
       stars: 0,
-      stats: "Jupyter Notebook • Python"
+      stats: "Python • Jupyter Notebook"
     },
     {
       id: "gamer-color",
@@ -190,22 +190,22 @@ export const portfolioConfig: PortfolioConfig = {
       featured: false,
       description: "An interactive, sleek web application that helps players discover their Gamer Color personality archetype.",
       longDescription: "The Gamer Color Personality Quiz is an 8-question assessment based on a 2D coordinate gaming motivation model (Heart vs. Head on the X-axis and Architect vs. Adventurer on the Y-axis).",
-      tags: ["TypeScript", "Frontend", "UI"],
+      tags: ["TypeScript", "React", "TailwindCSS", "Framer Motion"],
       githubUrl: "https://github.com/aryan-111106/Gamer-color",
       stars: 0,
-      stats: "TypeScript • React • TailwindCSS • Framer Motion"
+      stats: "Frontend • UI"
     },
     {
       id: "college",
-      name: "College C & Systems Programming",
-      category: "Systems / CLI",
+      name: "College C & Python Programming",
+      category: "Development",
       featured: false,
-      description: "Academic coursework repository containing C programming, memory algorithms, and fundamental computer science assignments.",
-      longDescription: "Contains structured C implementations of foundational computing algorithms, pointers, memory allocation, and lab exercises.",
-      tags: ["C", "Computer Science", "Academic", "Algorithms"],
+      description: "Academic coursework repository containing C programming, and fundamental Python assignments.",
+      longDescription: "Contains structured C implementations of data structures & algorithms, and Python lab exercises.",
+      tags: ["C", "DSA", "Python"],
       githubUrl: "https://github.com/aryan-111106/College",
       stars: 0,
-      stats: "C Programming"
+      stats: "C • Python"
     }
   ],
 

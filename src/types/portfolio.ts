@@ -1,7 +1,7 @@
 export interface ProjectItem {
   id: string;
   name: string;
-  category: 'Full Stack' | 'Systems / CLI' | 'AI / ML' | 'Frontend' | 'Mobile' | 'Open Source';
+  category: 'Full Stack' | 'Systems / CLI' | 'AI / ML' | 'Frontend' | 'Mobile' | 'Open Source' | 'Development' | 'Backend' | 'UI/UX';
   description: string;
   longDescription?: string;
   tags: string[];
