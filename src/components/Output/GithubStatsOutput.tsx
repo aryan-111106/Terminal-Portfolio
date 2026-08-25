@@ -315,18 +315,17 @@ export const GithubStatsOutput: React.FC<GithubStatsOutputProps> = ({ onExecute 
             </a>
           </div>
 
-          {/* Real Live Contribution Chart SVG Embed */}
-          <div className="overflow-x-auto no-scrollbar py-2 bg-black/40 rounded border border-slate-900/80 p-2 flex items-center justify-center">
+          {/* Real Live Contribution Chart SVG Embed (Styled for Dark Mode Terminal) */}
+          <div className="overflow-x-auto no-scrollbar py-3 bg-black/60 rounded-lg border border-slate-800/80 p-3 flex items-center justify-center shadow-inner">
             <img 
               src={`https://ghchart.rshah.org/00ff88/${username}`} 
               alt={`${username}'s real GitHub contribution chart`} 
-              className="max-w-full min-w-[500px] h-auto object-contain filter drop-shadow"
+              className="max-w-full min-w-[520px] h-auto object-contain transition-all"
+              style={{
+                filter: 'invert(0.92) hue-rotate(180deg) brightness(0.85) contrast(1.2)'
+              }}
               loading="lazy"
             />
-          </div>
-
-          <div className="text-[11px] text-gray-400 text-center">
-            Contribution heatmap is rendered directly from your public GitHub commits.
           </div>
         </div>
 
