@@ -10,6 +10,7 @@ import { PowerOverlay, PowerState } from './components/Terminal/PowerOverlay';
 import { MatrixRain } from './components/EasterEggs/MatrixRain';
 import { SnakeGame } from './components/EasterEggs/SnakeGame';
 import { SteamLocomotive } from './components/EasterEggs/SteamLocomotive';
+import { ThemeBackground } from './components/UI/ThemeBackground';
 import { Terminal as TerminalIcon } from 'lucide-react';
 
 export function App() {
@@ -61,6 +62,9 @@ export function App() {
         boxShadow: theme.glow ? `inset 0 0 120px rgba(0,0,0,0.9)` : undefined
       }}
     >
+      {/* Theme-Specific Dynamic Visual Backdrop */}
+      <ThemeBackground themeId={themeId} />
+
       {/* CRT Scanline & Phosphor Overlay */}
       <CRTOverlay enabled={crtEnabled} />
 
@@ -160,7 +164,7 @@ export function App() {
       {activeEasterEgg === 'matrix' && (
         <MatrixRain 
           onClose={() => setActiveEasterEgg(null)} 
-          accentColor={theme.colors.accent} 
+          theme={theme} 
         />
       )}
 
