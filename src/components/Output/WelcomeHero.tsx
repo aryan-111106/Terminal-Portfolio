@@ -15,13 +15,16 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
   };
 
   return (
-    <div className="my-3 font-mono text-xs md:text-sm select-text">
+    <div className="my-3 font-mono text-xs md:text-sm select-text w-full">
       {/* ASCII Art Hero Container */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-3 md:p-4 bg-black/40 border border-emerald-500/30 rounded-lg">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 p-4 md:p-5 bg-black/40 border border-emerald-500/30 rounded-xl w-full shadow-lg">
         {/* Left: ASCII Portrait */}
         {portfolioConfig.asciiPortrait && (
-          <div className="shrink-0 flex flex-col items-center">
-            <pre className="text-emerald-400 font-bold leading-none select-none text-[6.5px] sm:text-[8px] md:text-[9.5px] drop-shadow-sm whitespace-pre">
+          <div className="shrink-0 flex flex-col items-center justify-center self-center">
+            <pre 
+              className="text-emerald-400 font-mono font-bold select-none text-[6px] sm:text-[7.5px] md:text-[8.5px] drop-shadow-sm whitespace-pre"
+              style={{ lineHeight: '1.05', letterSpacing: '0px' }}
+            >
               {portfolioConfig.asciiPortrait.trim()}
             </pre>
             <span className="text-[10px] text-emerald-500/70 mt-1 uppercase tracking-widest font-mono">[ AVENGERS ]</span>
@@ -29,13 +32,18 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
         )}
 
         {/* Right: Big ASCII Name + Welcome message */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-2 overflow-hidden w-full">
+        <div className="flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left space-y-2.5 overflow-hidden w-full self-center">
           {/* Big ASCII Name Banner */}
           {portfolioConfig.asciiName && (
             <div className="w-full overflow-x-auto no-scrollbar py-0.5">
               <pre 
-                className="text-emerald-400 font-mono font-bold leading-[1.05] tracking-normal select-none text-[7px] sm:text-[8.5px] md:text-[10px] lg:text-[10.5px] whitespace-pre no-scrollbar"
-                style={{ fontVariantEastAsian: 'normal', fontFeatureSettings: '"tnum"' }}
+                className="text-emerald-400 font-mono font-bold select-none text-[6.5px] sm:text-[8px] md:text-[9.5px] lg:text-[10.5px] whitespace-pre no-scrollbar"
+                style={{ 
+                  lineHeight: '1.0', 
+                  letterSpacing: '0px',
+                  fontVariantEastAsian: 'normal', 
+                  fontFeatureSettings: '"tnum"' 
+                }}
               >
                 {portfolioConfig.asciiName.trim()}
               </pre>
@@ -53,7 +61,7 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
           </div>
 
           {/* Quick Start Interactive Command Buttons */}
-          <div className="pt-2.5 border-t border-emerald-500/20 w-full text-xs text-gray-300 flex flex-wrap items-center justify-center md:justify-start gap-1.5 leading-relaxed">
+          <div className="pt-2 border-t border-emerald-500/20 w-full text-xs text-gray-300 flex flex-wrap items-center justify-center md:justify-start gap-1.5 leading-relaxed">
             <span className="text-yellow-400 font-bold flex items-center gap-1">💡 Quick Start:</span>
             <span>Click or type</span>
 
