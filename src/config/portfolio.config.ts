@@ -256,7 +256,7 @@ export const portfolioConfig: PortfolioConfig = {
       period: "2017 — 2025",
       location: "Kolkata, West Bengal, India",
       details: [
-        "Core Subjects: Physics, Chemistry, Mathematics, and Computer Science (Python/C++)",
+        "Core Subjects: Physics, Chemistry, Mathematics, and Computer Science (Python)",
         "Strong foundation in algorithmic thinking, mathematics, and programming fundamentals"
       ]
     }

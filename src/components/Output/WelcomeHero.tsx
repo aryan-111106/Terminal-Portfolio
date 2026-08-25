@@ -6,6 +6,14 @@ interface WelcomeHeroProps {
 }
 
 export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
+  const handleCommandClick = (cmd: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (onExecute) {
+      onExecute(cmd);
+    }
+  };
+
   return (
     <div className="my-3 font-mono text-xs md:text-sm select-text">
       {/* ASCII Art Hero Container */}
@@ -31,12 +39,12 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
             </div>
           )}
 
-          {/* Welcome Taglines */}
-          <div className="space-y-1 pt-1">
-            <h1 className="text-sm md:text-base font-bold text-emerald-300">
-              {portfolioConfig.welcomeTagline || `Welcome to ${portfolioConfig.name}'s Terminal Portfolio`}
-            </h1>
-            <p className="text-xs text-gray-300">
+          {/* Welcome Tagline & Subtitle */}
+          <div>
+            <h2 className="text-sm md:text-base font-bold text-white tracking-wide">
+              {portfolioConfig.welcomeTagline || `Welcome to ${portfolioConfig.name}'s Portfolio`}
+            </h2>
+            <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">
               {portfolioConfig.welcomeSubtitle || portfolioConfig.title}
             </p>
           </div>
@@ -44,43 +52,68 @@ export const WelcomeHero: React.FC<WelcomeHeroProps> = ({ onExecute }) => {
           {/* Quick Start Interactive Command Buttons */}
           <div className="pt-2.5 border-t border-emerald-500/20 w-full text-xs text-gray-300 flex flex-wrap items-center justify-center md:justify-start gap-1.5 leading-relaxed">
             <span className="text-yellow-400 font-bold flex items-center gap-1">💡 Quick Start:</span>
-            <span>Type</span>
+            <span>Click or type</span>
+
             <button
-              onClick={() => onExecute?.('projects')}
-              className="px-2 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600/60 hover:border-emerald-400 text-emerald-300 rounded font-mono font-bold transition hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              title="Click to execute 'projects'"
+              type="button"
+              onClick={(e) => handleCommandClick('projects', e)}
+              className="px-2 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'projects'"
             >
               projects
             </button>
+
             <span>to view work,</span>
+
             <button
-              onClick={() => onExecute?.('skills')}
-              className="px-2 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600/60 hover:border-emerald-400 text-emerald-300 rounded font-mono font-bold transition hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              title="Click to execute 'skills'"
+              type="button"
+              onClick={(e) => handleCommandClick('skills', e)}
+              className="px-2 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'skills'"
             >
               skills
             </button>
+
             <span>for stack,</span>
+
             <button
-              onClick={() => onExecute?.('help')}
-              className="px-2 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600/60 hover:border-emerald-400 text-emerald-300 rounded font-mono font-bold transition hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              title="Click to execute 'help'"
+              type="button"
+              onClick={(e) => handleCommandClick('experience', e)}
+              className="px-2 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'experience'"
+            >
+              experience
+            </button>
+
+            <span>for journey,</span>
+
+            <button
+              type="button"
+              onClick={(e) => handleCommandClick('help', e)}
+              className="px-2 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'help'"
             >
               help
             </button>
+
             <span>for commands, or explore with</span>
+
             <button
-              onClick={() => onExecute?.('ls')}
-              className="px-1.5 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600/60 hover:border-emerald-400 text-emerald-300 rounded font-mono font-bold transition hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              title="Click to execute 'ls'"
+              type="button"
+              onClick={(e) => handleCommandClick('ls', e)}
+              className="px-1.5 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'ls'"
             >
               ls
             </button>
+
             <span>&</span>
+
             <button
-              onClick={() => onExecute?.('cd projects')}
-              className="px-1.5 py-0.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600/60 hover:border-emerald-400 text-emerald-300 rounded font-mono font-bold transition hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              title="Click to execute 'cd projects'"
+              type="button"
+              onClick={(e) => handleCommandClick('cd projects', e)}
+              className="px-1.5 py-0.5 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-600/70 hover:border-emerald-400 text-emerald-300 hover:text-emerald-100 rounded font-mono font-bold transition-all transform hover:scale-105 active:scale-95 cursor-pointer shadow-sm inline-flex items-center"
+              title="Click to run 'cd projects'"
             >
               cd
             </button>
