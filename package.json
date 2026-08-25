@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node test-runner.mjs",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "node test-runner.mjs",
     "test:e2e": "node test-runner.mjs"
